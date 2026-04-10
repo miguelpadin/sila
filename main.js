@@ -75,3 +75,23 @@ if (filterButtons.length && portfolioItems.length) {
     button.addEventListener('click', () => setFilter(button.dataset.filter || 'all'));
   });
 }
+
+// Cookie banner
+const cookieBanner = document.getElementById('cookieBanner');
+if (cookieBanner) {
+  if (!localStorage.getItem('cookie-consent')) {
+    requestAnimationFrame(() => {
+      setTimeout(() => cookieBanner.classList.add('is-visible'), 600);
+    });
+  }
+
+  cookieBanner.querySelector('.cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    cookieBanner.classList.remove('is-visible');
+  });
+
+  cookieBanner.querySelector('.cookie-reject').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'rejected');
+    cookieBanner.classList.remove('is-visible');
+  });
+}
