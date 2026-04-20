@@ -202,7 +202,11 @@ textarea {
 }
 
 .section {
-  padding: clamp(4rem, 9vw, 7rem) 0;
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+main > .section:first-child {
+  padding-top: clamp(4rem, 9vw, 7rem);
 }
 
 .eyebrow {
@@ -528,17 +532,19 @@ h4 {
 }
 
 .bodas-text {
-  max-width: 72ch;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
+  max-width: 100%;
 }
 
 .bodas-text p {
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.75;
   color: var(--text);
+  text-align: justify;
+  margin: 0 0 1.4rem;
+}
+
+.bodas-text p:last-child {
+  margin-bottom: 0;
 }
 
 .bodas-collage img {
@@ -548,15 +554,37 @@ h4 {
 }
 
 .quote-panel {
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 5vw, 4rem);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.55)),
     var(--surface-strong);
-  text-align: center;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
+
+.quote-panel p {
+  width: 100%;
+  text-align: justify;
+  margin: 0;
+}
+
+.quote-panel .button-row {
+  margin-top: 0;
+  align-self: flex-end;
+}
+
+@media (max-width: 760px) {
+  .quote-panel .button-row,
+  .quote-panel .button-row .btn {
+    width: 100%;
+  }
+}
+
 
 .quote-panel blockquote {
   max-width: 14ch;
