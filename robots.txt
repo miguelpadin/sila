@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://silapadin.com/sitemap.xml
+Sitemap: https://www.silapadin.com/sitemap.xml
