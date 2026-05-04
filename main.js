@@ -77,17 +77,34 @@ if (filterButtons.length && portfolioItems.length) {
 }
 
 // Cookie banner
+function loadGA() {
+  if (document.getElementById('ga-script')) return;
+  const s = document.createElement('script');
+  s.id = 'ga-script';
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QRXP83WV9M';
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-QRXP83WV9M');
+}
+
 const cookieBanner = document.getElementById('cookieBanner');
 if (cookieBanner) {
-  if (!localStorage.getItem('cookie-consent')) {
+  const consent = localStorage.getItem('cookie-consent');
+  if (!consent) {
     requestAnimationFrame(() => {
       setTimeout(() => cookieBanner.classList.add('is-visible'), 600);
     });
+  } else if (consent === 'accepted') {
+    loadGA();
   }
 
   cookieBanner.querySelector('.cookie-accept').addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'accepted');
     cookieBanner.classList.remove('is-visible');
+    loadGA();
   });
 
   cookieBanner.querySelector('.cookie-reject').addEventListener('click', () => {
