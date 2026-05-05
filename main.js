@@ -58,17 +58,32 @@ const filterButtons = document.querySelectorAll('[data-filter]');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
 if (filterButtons.length && portfolioItems.length) {
+  const filterStatus = document.getElementById('filter-status');
+
   const setFilter = (filter) => {
     filterButtons.forEach((button) => {
-      button.classList.toggle('is-active', button.dataset.filter === filter);
+      const isActive = button.dataset.filter === filter;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
     });
 
+    let visibleCount = 0;
     portfolioItems.forEach((item) => {
       const categories = item.dataset.category ? item.dataset.category.split(' ') : [];
       const shouldShow = filter === 'all' || categories.includes(filter);
       item.classList.toggle('is-hidden', !shouldShow);
       item.hidden = !shouldShow;
+      if (shouldShow) visibleCount++;
     });
+
+    if (filterStatus) {
+      const activeButton = [...filterButtons].find((b) => b.dataset.filter === filter);
+      const label = activeButton ? activeButton.textContent.trim() : filter;
+      filterStatus.textContent =
+        filter === 'all'
+          ? `Mostrando ${visibleCount} fotos`
+          : `Mostrando ${visibleCount} fotos de ${label.toLowerCase()}`;
+    }
   };
 
   filterButtons.forEach((button) => {
@@ -107,8 +122,16 @@ if (cookieBanner) {
     loadGA();
   });
 
-  cookieBanner.querySelector('.cookie-reject').addEventListener('click', () => {
+  const rejectCookies = () => {
     localStorage.setItem('cookie-consent', 'rejected');
     cookieBanner.classList.remove('is-visible');
+  };
+
+  cookieBanner.querySelector('.cookie-reject').addEventListener('click', rejectCookies);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && cookieBanner.classList.contains('is-visible')) {
+      rejectCookies();
+    }
   });
 }

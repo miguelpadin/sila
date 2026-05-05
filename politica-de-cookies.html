@@ -22,6 +22,7 @@
   </head>
 
   <body class="page-legal">
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
     <header class="site-header">
       <div class="wrap header-bar">
         <a class="brand" href="index.html" aria-label="Ir al inicio de Sila Padín Studio">
@@ -32,12 +33,12 @@
           </span>
         </a>
 
-        <button class="menu-btn" type="button" aria-expanded="false" aria-label="Abrir menú">
+        <button class="menu-btn" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="site-nav">
           <span></span>
           <span></span>
         </button>
 
-        <nav class="site-nav" aria-label="Navegación principal">
+        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
           <a href="servicios.html">Servicios</a>
           <a href="portafolio.html">Portafolio</a>
           <a href="historias.html">Historias</a>
@@ -47,7 +48,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="section">
         <div class="wrap" style="max-width: 720px; padding-top: 5rem; padding-bottom: 5rem;">
           <h1 style="font-family: Syne, sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 2rem;">Política de cookies</h1>
