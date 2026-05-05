@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1068,7 +1069,7 @@ h4 {
   }
 
   .wrap {
-    width: min(var(--max-width), calc(100% - 2.4rem));
+    width: min(var(--max-width), calc(100% - 2rem));
   }
 }
 
