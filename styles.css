@@ -31,6 +31,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   font-family: Manrope, sans-serif;
   color: var(--ink);
   background:
@@ -1034,7 +1035,7 @@ h4 {
   .page-title,
   .mark-display,
   .contact-hero h1 {
-    font-size: clamp(2.8rem, 16vw, 4.5rem);
+    font-size: clamp(2.4rem, 12vw, 4rem);
   }
 
   .hero-meta,
