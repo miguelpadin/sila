@@ -920,14 +920,25 @@ h4 {
 }
 
 .footer-bottom {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding-top: 1.4rem;
   margin-top: 1.4rem;
   border-top: 1px solid var(--line);
 }
 
-.footer-bottom span:last-child {
+.footer-bottom > span:last-of-type {
   text-align: right;
+}
+
+.footer-bottom > a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-bottom > a:hover {
+  color: var(--ink);
 }
 
 .footer-legal {
@@ -992,7 +1003,7 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .footer-bottom span:last-child {
+  .footer-bottom > span:last-of-type {
     text-align: left;
   }
 }
