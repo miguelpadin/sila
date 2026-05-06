@@ -34,8 +34,13 @@ if (menuButton && siteNav) {
 }
 
 const revealElements = document.querySelectorAll('.reveal');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if ('IntersectionObserver' in window) {
+if (prefersReducedMotion) {
+  revealElements.forEach((element) => {
+    element.classList.add('is-visible');
+  });
+} else if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -94,20 +99,43 @@ if (filterButtons.length && portfolioItems.length) {
 // Cookie banner
 function loadGA() {
   if (document.getElementById('ga-script')) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag =
+    window.gtag ||
+    function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
   const s = document.createElement('script');
   s.id = 'ga-script';
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QRXP83WV9M';
   document.head.appendChild(s);
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-QRXP83WV9M');
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-QRXP83WV9M');
 }
 
 const cookieBanner = document.getElementById('cookieBanner');
 if (cookieBanner) {
-  const consent = localStorage.getItem('cookie-consent');
+  const acceptButton = cookieBanner.querySelector('.cookie-accept');
+  const rejectButton = cookieBanner.querySelector('.cookie-reject');
+  const getConsent = () => {
+    try {
+      return localStorage.getItem('cookie-consent');
+    } catch {
+      return null;
+    }
+  };
+  const setConsent = (value) => {
+    try {
+      localStorage.setItem('cookie-consent', value);
+    } catch {
+      // If storage is blocked, the visible choice should still close the banner.
+    }
+  };
+
+  const consent = getConsent();
   if (!consent) {
     requestAnimationFrame(() => {
       setTimeout(() => cookieBanner.classList.add('is-visible'), 600);
@@ -116,18 +144,18 @@ if (cookieBanner) {
     loadGA();
   }
 
-  cookieBanner.querySelector('.cookie-accept').addEventListener('click', () => {
-    localStorage.setItem('cookie-consent', 'accepted');
+  acceptButton?.addEventListener('click', () => {
+    setConsent('accepted');
     cookieBanner.classList.remove('is-visible');
     loadGA();
   });
 
   const rejectCookies = () => {
-    localStorage.setItem('cookie-consent', 'rejected');
+    setConsent('rejected');
     cookieBanner.classList.remove('is-visible');
   };
 
-  cookieBanner.querySelector('.cookie-reject').addEventListener('click', rejectCookies);
+  rejectButton?.addEventListener('click', rejectCookies);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && cookieBanner.classList.contains('is-visible')) {

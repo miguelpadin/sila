@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const page = {
+  "title": "Contacto | Sila Padín Studio",
+  "description": "Reserva una sesión o pide una propuesta personalizada para fotografía de marca, maternidad, retrato o lifestyle.",
+  "canonicalPath": "/contacto.html",
+  "bodyClass": "page-contact",
+  "currentPage": "contacto",
+  "ogDescription": "¿Tienes un proyecto en mente? Hablemos. Sesiones de maternidad, marca personal, lifestyle y bodas en Galicia.",
+  "ogImage": "/assets/sobre_mi_01.webp",
+  "ogImageAlt": "Contacta con Sila Padín Studio para tu sesión",
+  "footerCopy": "Reserva una sesión serena, clara y pensada para durar."
+} as const;
+---
+
+<BaseLayout {...page}>
+<main id="main-content">
+      <section class="section reveal">
+        <div class="wrap page-hero contact-hero">
+          <div>
+            <p class="eyebrow">Contacto</p>
+            <h1 class="page-title">Hablemos de tu próxima sesión</h1>
+          </div>
+          <p class="page-intro">
+            Si tienes una idea, una fecha aproximada o simplemente quieres ver si encajamos,
+            escríbeme. Podemos construir una propuesta desde cero o adaptar una sesión a lo que
+            necesitas comunicar.
+          </p>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap contact-grid">
+          <article class="contact-card">
+            <p class="mini-eyebrow">Email</p>
+            <h3>Escríbeme directamente</h3>
+            <p>
+              La forma más clara para compartir idea, objetivos, disponibilidad y cualquier
+              referencia visual que ya tengas.
+            </p>
+            <a class="link-inline" href="mailto:silapadin@gmail.com">silapadin@gmail.com</a>
+          </article>
+
+          <article class="contact-card">
+            <p class="mini-eyebrow">Instagram</p>
+            <h3>Seguimiento cercano</h3>
+            <p>
+              Perfecto si quieres ver sesiones recientes, tono visual y tener un primer contacto
+              más ligero.
+            </p>
+            <a
+              class="link-inline"
+              href="https://www.instagram.com/silapadinphotography"
+              target="_blank"
+              rel="noreferrer"
+              >@silapadinphotography</a
+            >
+          </article>
+
+          <article class="contact-card">
+            <p class="mini-eyebrow">Base</p>
+            <h3>Galicia, con desplazamientos puntuales</h3>
+            <p>
+              Trabajo principalmente en exterior o en espacios con luz natural, adaptando cada
+              propuesta a la localización.
+            </p>
+            <p class="contact-note">Disponible para marca, maternidad, retrato y lifestyle.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap contact-shell">
+          <article class="content-card">
+            <p class="eyebrow">Qué contarme</p>
+            <h3>Cuanto más claro sea el punto de partida, mejor puedo ayudarte</h3>
+            <ul class="mini-list">
+              <li>Qué tipo de sesión estás buscando y para qué la necesitas.</li>
+              <li>Fecha aproximada, ciudad o localización en mente.</li>
+              <li>Si hay una estética, referencias o imágenes que te representen.</li>
+              <li>Qué uso tendrán las fotos: web, redes, dossier, campaña o recuerdo personal.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <p class="eyebrow">Proceso</p>
+            <h3>Una conversación breve y una propuesta clara</h3>
+            <ul class="mini-list">
+              <li>Primero revisamos tu idea y aterrizamos el enfoque.</li>
+              <li>Después preparo una propuesta sencilla con alcance y dirección visual.</li>
+              <li>Una vez cerrada la sesión, coordinamos fecha, ritmo y entrega final.</li>
+            </ul>
+
+            <div class="button-row">
+              <a
+                class="btn btn-solid"
+                href="mailto:silapadin@gmail.com?subject=Consulta%20para%20sesi%C3%B3n"
+                >Enviar email</a
+              >
+              <a class="btn btn-line" href="/servicios.html">Ver servicios</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="process-grid">
+            <article class="process-card">
+              <span>01</span>
+              <h3>Cuéntame la idea</h3>
+              <p>Me compartes objetivo, momento o necesidad visual, aunque todavía esté en bruto.</p>
+            </article>
+            <article class="process-card">
+              <span>02</span>
+              <h3>Te propongo un enfoque</h3>
+              <p>Definimos formato, narrativa, localización y el tipo de entrega más útil para ti.</p>
+            </article>
+            <article class="process-card">
+              <span>03</span>
+              <h3>Lo convertimos en imágenes</h3>
+              <p>Trabajamos la sesión con calma y recibes una selección final coherente y lista para usar.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

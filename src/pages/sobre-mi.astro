@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const page = {
+  "title": "Sobre mí | Sila Padín Studio",
+  "description": "Conoce la mirada de Sila Padín: fotografía editorial, maternidad, marca personal y lifestyle desde Galicia.",
+  "canonicalPath": "/sobre-mi.html",
+  "bodyClass": "page-about",
+  "currentPage": "sobre-mi",
+  "ogImage": "/assets/servicios_03.webp",
+  "ogImageAlt": "Sila Padín, fotógrafa y directora visual en Galicia"
+} as const;
+---
+
+<BaseLayout {...page}>
+<main id="main-content">
+      <section class="section reveal">
+        <div class="wrap about-hero">
+          <div class="about-copy">
+            <p class="eyebrow">Sobre mí</p>
+            <h1 class="mark-display">
+              Sila Padín <span>Visuals</span>
+            </h1>
+            <p>
+              Trabajo desde Galicia como fotógrafa y directora visual. Mi enfoque combina imagen, identidad y contenido, acompañando tanto a marcas como a personas en la construcción de una estética coherente, serena y con intención.
+            </p>
+            <p>
+              Me interesa la imagen que respira: la que no necesita artificio para sostener una
+              emoción o transmitir una identidad clara. Por eso, cuido cada detalle; desde la
+              dirección visual, hasta la forma en la que se comunica para que todo tenga sentido
+              dentro de un mismo lenguaje.
+            </p>
+
+            <div class="button-row">
+              <a class="btn btn-solid" href="/contacto.html">Hablemos</a>
+              <a class="btn btn-line" href="/portafolio.html">Ver trabajo</a>
+            </div>
+          </div>
+
+          <figure class="about-portrait">
+            <img decoding="async"
+              src="/assets/sobre_mi_01.webp"
+              alt="Sila Padín, fotógrafa y directora visual en Galicia"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap about-columns">
+          <article class="about-statement">
+            <p class="eyebrow">Filosofía</p>
+            <blockquote>
+              “La belleza no está en añadir más, sino en dejar solo lo que de verdad importa.”
+            </blockquote>
+            <p>
+              Trabajo desde la idea de que menos, pero mejor, no solo se aplica a la imagen, sino también a la marca y a la comunicación.
+              <br>
+              Busco proyectos donde la estética, el mensaje y la intención estén alineados, creando resultados que se sienten naturales, coherentes y duraderos.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <p class="eyebrow">Lo que cuido</p>
+            <h3>Una mirada limpia, con intención y coherencia</h3>
+            <ul class="mini-list">
+              <li>Luz y dirección que acompaña sin forzar, tanto en fotografía como en contenido de marca.</li>
+              <li>Ritmo de trabajo cuidado, para que cada proyecto y cada persona se sienta cómodo dentro del proceso.</li>
+              <li>Coherencia visual en todo el conjunto: desde una imagen individual hasta la identidad completa de una marca.</li>
+              <li>Edición y curado pensados para que cada pieza tenga sentido dentro de un sistema, no de forma aislada.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Experiencia</p>
+              <h2>
+                Estrategia visual con criterio y coherencia
+              </h2>
+            </div>
+            <p>
+              Mi trabajo combina fotografía, identidad visual y contenido para redes. Acompaño a marcas y personas en la construcción de una imagen sólida, cuidando tanto la estética como la forma en la que se comunica. Cada proyecto parte de la observación, el detalle y una dirección clara.
+            </p>
+          </div>
+
+          <div class="detail-grid">
+            <article class="info-card">
+              <p class="mini-eyebrow">Marca</p>
+              <h3>Identidad y contenido con intención</h3>
+              <p>
+                Desarrollo proyectos de branding y rebranding, y creo contenido visual alineado para web y redes sociales.
+              <br>
+              El objetivo es construir marcas coherentes, reconocibles y con una comunicación que tenga sentido en todos sus canales.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <p class="mini-eyebrow">Fotografía</p>
+              <h3>Imagen natural, presencia real</h3>
+              <p>
+                Trabajo la fotografía de marca personal, retrato, maternidad y lifestyle desde una mirada minimalista.
+                <br>
+                Busco imágenes honestas, limpias y con una estética cuidada que no eclipse el mmomento.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <p class="mini-eyebrow">Edición</p>
+              <h3>Curado visual y coherencia estética</h3>
+              <p>
+                La selección y edición forman parte del proceso creativo.
+                <br>
+                Definir qué se muestra, cómo se muestra y qué tono visual tiene es lo que termina de dar sentido a cada proyecto.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="cta-banner">
+            <div>
+              <p class="eyebrow on-dark">Contacto</p>
+              <h2>¿Te gustaría trabajar conmigo?</h2>
+              <p>
+                Si conectas con esta forma de mirar, podemos construir una sesión a medida con la
+                calma y el criterio que tu proyecto necesita.
+              </p>
+            </div>
+            <div class="button-row">
+              <a class="btn btn-solid-light" href="/contacto.html">Enviar mensaje</a>
+              <a class="btn btn-dark-line" href="/servicios.html">Ver servicios</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>
