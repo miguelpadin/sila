@@ -266,7 +266,7 @@ h3,
 h4 {
   margin: 0;
   font-family: Syne, sans-serif;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   line-height: 0.94;
 }
 
@@ -630,7 +630,7 @@ h4 {
   font-family: Syne, sans-serif;
   font-size: clamp(2.2rem, 5vw, 4.4rem);
   line-height: 0.95;
-  letter-spacing: -0.06em;
+  letter-spacing: 0;
 }
 
 .split-panel {
@@ -1001,6 +1001,26 @@ h4 {
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 1100px) {

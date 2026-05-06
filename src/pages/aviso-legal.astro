@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const page = {
+  "title": "Aviso legal | Sila Padín Studio",
+  "description": "Aviso legal de Sila Padín Studio.",
+  "canonicalPath": "/aviso-legal.html",
+  "bodyClass": "page-legal",
+  "ogImage": "/assets/brand/logo.png",
+  "ogImageAlt": "Logo de Sila Padín Studio"
+} as const;
+---
+
+<BaseLayout {...page}>
+<main id="main-content">
+      <section class="section">
+        <div class="wrap" style="max-width: 720px; padding-top: 5rem; padding-bottom: 5rem;">
+          <h1 style="font-family: Syne, sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 2rem;">Aviso legal</h1>
+
+          <div class="legal-content" style="color: var(--muted); line-height: 1.8; font-size: 0.95rem;">
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 0; margin-bottom: 0.75rem;">Datos identificativos</h2>
+            <p>
+              <strong style="color: var(--ink);">Titular:</strong> Sila Padín<br>
+              <strong style="color: var(--ink);">Actividad:</strong> Fotografía y dirección visual<br>
+              <strong style="color: var(--ink);">Domicilio:</strong> Galicia, España<br>
+              <strong style="color: var(--ink);">Contacto:</strong> <a href="mailto:silapadin@gmail.com" style="color: var(--ink);">silapadin@gmail.com</a>
+            </p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Objeto</h2>
+            <p>El presente aviso legal regula el acceso y uso del sitio web <strong style="color: var(--ink);">www.silapadin.com</strong>, del que es titular Sila Padín. El acceso al sitio implica la aceptación de las condiciones aquí recogidas.</p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Propiedad intelectual</h2>
+            <p>Todos los contenidos de este sitio web —textos, fotografías, logotipos, imágenes y diseño gráfico— son propiedad de Sila Padín o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa y por escrito.</p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Responsabilidad</h2>
+            <p>Sila Padín no se hace responsable de los daños o perjuicios que pudieran derivarse del uso de este sitio web o de la información contenida en él. El titular se reserva el derecho a modificar, en cualquier momento, la información contenida en el sitio.</p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Legislación aplicable</h2>
+            <p>Este aviso legal se rige por la legislación española y europea vigente. Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales competentes de Galicia, España.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

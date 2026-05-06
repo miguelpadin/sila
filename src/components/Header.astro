@@ -1,0 +1,49 @@
+---
+type NavKey = 'servicios' | 'portafolio' | 'historias' | 'sobre-mi' | 'contacto';
+
+interface Props {
+  currentPage?: NavKey;
+}
+
+const { currentPage } = Astro.props;
+
+const navItems: Array<{ key: NavKey; href: string; label: string; cta?: boolean }> = [
+  { key: 'servicios', href: '/servicios.html', label: 'Servicios' },
+  { key: 'portafolio', href: '/portafolio.html', label: 'Portafolio' },
+  { key: 'historias', href: '/historias.html', label: 'Historias' },
+  { key: 'sobre-mi', href: '/sobre-mi.html', label: 'Sobre mí' },
+  { key: 'contacto', href: '/contacto.html', label: 'Contacto', cta: true },
+];
+---
+
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="/" aria-label="Ir al inicio de Sila Padín Studio">
+      <img src="/assets/brand/logo.png" alt="Logo de Sila Padín Studio" width="96" height="96" />
+      <span class="brand-text">
+        <strong>Sila Padín</strong>
+        <small>Studio</small>
+      </span>
+    </a>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      {
+        navItems.map((item) => (
+          <a
+            class={item.cta ? 'nav-cta' : undefined}
+            href={item.href}
+            aria-current={currentPage === item.key ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

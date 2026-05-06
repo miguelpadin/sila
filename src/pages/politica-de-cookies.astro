@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const page = {
+  "title": "Política de cookies | Sila Padín Studio",
+  "description": "Política de cookies de Sila Padín Studio.",
+  "canonicalPath": "/politica-de-cookies.html",
+  "bodyClass": "page-legal",
+  "ogImage": "/assets/brand/logo.png",
+  "ogImageAlt": "Logo de Sila Padín Studio"
+} as const;
+---
+
+<BaseLayout {...page}>
+<main id="main-content">
+      <section class="section">
+        <div class="wrap" style="max-width: 720px; padding-top: 5rem; padding-bottom: 5rem;">
+          <h1 style="font-family: Syne, sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 2rem;">Política de cookies</h1>
+
+          <div class="legal-content" style="color: var(--muted); line-height: 1.8; font-size: 0.95rem;">
+            <p>Este sitio web utiliza cookies propias y de terceros para mejorar tu experiencia de navegación y analizar el tráfico de forma anónima.</p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">¿Qué son las cookies?</h2>
+            <p>Las cookies son pequeños ficheros de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten que el sitio recuerde tus preferencias y acciones durante un período de tiempo.</p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Cookies que utilizamos</h2>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <th style="text-align: left; padding: 0.6rem 0.5rem; color: var(--ink); font-size: 0.85rem; font-weight: 600;">Cookie</th>
+                  <th style="text-align: left; padding: 0.6rem 0.5rem; color: var(--ink); font-size: 0.85rem; font-weight: 600;">Tipo</th>
+                  <th style="text-align: left; padding: 0.6rem 0.5rem; color: var(--ink); font-size: 0.85rem; font-weight: 600;">Finalidad</th>
+                  <th style="text-align: left; padding: 0.6rem 0.5rem; color: var(--ink); font-size: 0.85rem; font-weight: 600;">Duración</th>
+                </tr>
+              </thead>
+              <tbody style="font-size: 0.88rem;">
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 0.6rem 0.5rem;">cookie-consent</td>
+                  <td style="padding: 0.6rem 0.5rem;">Propia · Necesaria</td>
+                  <td style="padding: 0.6rem 0.5rem;">Guarda tu preferencia sobre el uso de cookies</td>
+                  <td style="padding: 0.6rem 0.5rem;">1 año</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 0.6rem 0.5rem;">_ga, _ga_*</td>
+                  <td style="padding: 0.6rem 0.5rem;">Terceros · Analítica</td>
+                  <td style="padding: 0.6rem 0.5rem;">Google Analytics — mide visitas de forma anónima</td>
+                  <td style="padding: 0.6rem 0.5rem;">2 años</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Gestión de cookies</h2>
+            <p>Puedes aceptar o rechazar las cookies analíticas desde el aviso que aparece al entrar al sitio. También puedes configurar tu navegador para bloquear o eliminar las cookies. Ten en cuenta que desactivar algunas cookies puede afectar a la funcionalidad del sitio.</p>
+
+            <h2 style="font-family: Syne, sans-serif; font-size: 1.15rem; color: var(--ink); margin-top: 2rem; margin-bottom: 0.75rem;">Más información</h2>
+            <p>Para cualquier consulta sobre el uso de cookies puedes contactar con nosotros en <a href="mailto:silapadin@gmail.com" style="color: var(--ink);">silapadin@gmail.com</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>
