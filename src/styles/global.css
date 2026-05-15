@@ -963,14 +963,16 @@ h4 {
 }
 
 .footer-bottom {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   padding-top: 1.4rem;
   margin-top: 1.4rem;
   border-top: 1px solid var(--line);
 }
 
-.footer-bottom span:last-child {
-  text-align: right;
+.footer-version {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.5;
 }
 
 .footer-legal {
@@ -1050,10 +1052,6 @@ h4 {
 
   .footer-bottom {
     grid-template-columns: 1fr;
-  }
-
-  .footer-bottom span:last-child {
-    text-align: left;
   }
 }
 
