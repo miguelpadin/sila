@@ -972,6 +972,7 @@ h4 {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding-top: 1.4rem;
+  color: #686c7a;
 }
 
 @media (min-width: 761px) {
