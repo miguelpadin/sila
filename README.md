@@ -1,5 +1,6 @@
 # Sila Padín Studio — Website
 
+
 [![Astro](https://img.shields.io/badge/Astro-6.2.2-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build) [![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Vercel](https://img.shields.io/badge/Vercel-deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
 
 Photography portfolio and brand website for [Sila Padín Studio](https://www.silapadin.com), a photographer based in Galicia, Spain, specialising in editorial, maternity, portrait, lifestyle, and wedding photography.
