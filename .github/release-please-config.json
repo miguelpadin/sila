@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "fab8308ebc7e58c1f9f64f7251e4f3a1dec973a9",
+  "include-v-in-tag": true,
+  "include-component-in-tag": false,
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "sila",
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}
