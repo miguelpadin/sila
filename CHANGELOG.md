@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/miguelpadin/sila/compare/v1.2.2...v1.3.0) (2026-05-15)
+
+
+### Features
+
+* integrate Microsoft Clarity analytics with cookie consent ([68c361c](https://github.com/miguelpadin/sila/commit/68c361cf2d69c7f685f5fea294bf203dbc2b6655))
+
+
+### Bug Fixes
+
+* use official Clarity snippet in loadClarity ([ca701f4](https://github.com/miguelpadin/sila/commit/ca701f4c476b052062ace7b4434db1f370b444e2))
+
 ## [1.2.2](https://github.com/miguelpadin/sila/compare/v1.2.1...v1.2.2) (2026-05-15)
 
 
