@@ -962,12 +962,16 @@ h4 {
   text-decoration: underline;
 }
 
+.footer-divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 1.4rem 0 0;
+}
+
 .footer-bottom {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding-top: 1.4rem;
-  margin-top: 1.4rem;
-  border-top: 1px solid var(--line);
 }
 
 @media (min-width: 761px) {
@@ -985,13 +989,10 @@ h4 {
 }
 
 .footer-legal {
-  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 1.5rem;
-  padding-top: 0.9rem;
-  margin-top: 0.5rem;
-  border-top: 1px solid var(--line);
+  padding: 0.9rem 0 0;
 }
 
 .footer-legal a {
