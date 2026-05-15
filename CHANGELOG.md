@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/miguelpadin/sila/compare/v1.2.1...v1.2.2) (2026-05-15)
+
+
+### Bug Fixes
+
+* adjust letter-spacing for h3 and h4 headings for improved typography ([29d7e13](https://github.com/miguelpadin/sila/commit/29d7e137f99b6036988fc7175ef5b53faefe33fa))
+
 ## [1.2.1](https://github.com/miguelpadin/sila/compare/v1.2.0...v1.2.1) (2026-05-15)
 
 
