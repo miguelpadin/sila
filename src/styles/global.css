@@ -970,13 +970,18 @@ h4 {
   border-top: 1px solid var(--line);
 }
 
-.footer-bottom > span:nth-child(2) {
-  text-align: center;
+@media (min-width: 761px) {
+  .footer-bottom > span:nth-child(2) {
+    text-align: center;
+  }
+
+  .footer-version {
+    text-align: right;
+  }
 }
 
 .footer-version {
   font-variant-numeric: tabular-nums;
-  text-align: right;
 }
 
 .footer-legal {
