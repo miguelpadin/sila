@@ -717,7 +717,7 @@ h4 {
 
 .cta-banner p {
   max-width: 52ch;
-  color: rgba(255, 255, 255, 0.72);
+  color: #bcbcc5;
 }
 
 .page-hero {
@@ -1139,11 +1139,12 @@ h4 {
   right: 1.75rem;
   transform: translateY(calc(100% + 2.5rem));
   z-index: 900;
-  width: min(400px, calc(100% - 2rem));
+  width: min(380px, calc(100% - 2rem));
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.1rem 1.4rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1.25rem 1.4rem;
   background: rgba(251, 250, 247, 0.94);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -1164,7 +1165,6 @@ h4 {
   font-size: 0.82rem;
   color: var(--muted);
   line-height: 1.5;
-  flex: 1;
 }
 
 .cookie-link {
@@ -1177,7 +1177,7 @@ h4 {
 .cookie-actions {
   display: flex;
   gap: 0.6rem;
-  flex-shrink: 0;
+  align-self: flex-end;
 }
 
 .cookie-btn {
