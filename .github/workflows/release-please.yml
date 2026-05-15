@@ -14,9 +14,48 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - name: Create release PR or tag release
+        id: release
         uses: googleapis/release-please-action@v5
         with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
           config-file: .github/release-please-config.json
           manifest-file: .release-please-manifest.json
+
+      - name: Check out release tag
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.release.outputs.tag_name }}
+
+      - name: Set up Node.js
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Set up pnpm
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.1.1
+
+      - name: Install Vercel CLI
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel production environment
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build production artifacts
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy production to Vercel
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

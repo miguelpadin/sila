@@ -21,7 +21,7 @@ The site is built as a fast static experience with a strong editorial feel: imag
 - **Accessibility:** Spanish document language, skip link, labelled navigation, `aria-current`, menu state with `aria-expanded`, visible focus styles, screen-reader-only status updates, live regions, and reduced-motion fallbacks.
 - **Performance:** static output, WebP image assets, preconnected font origins, direct asset references, and HTML kept readable with `compressHTML: false`.
 - **Privacy:** cookie banner with explicit accept/reject actions; Google Analytics loads only after consent is accepted.
-- **Deployment:** Vercel builds with `pnpm build`, serves `dist/`, and redirects `sila-fawn.vercel.app` to `www.silapadin.com` with a 301.
+- **Deployment:** Git-based auto-deploys are disabled in Vercel; pull requests get preview deployments, while production deploys only when Release Please creates a SemVer tag.
 
 ## Project structure
 
@@ -62,4 +62,18 @@ pnpm preview    # preview the production build locally
 
 ## Deployment
 
-Vercel detects Astro automatically and runs `pnpm build` on every push to `main`. The `dist/` folder is served as the site root. The domain `sila-fawn.vercel.app` redirects to `www.silapadin.com` via a 301 configured in `vercel.json`.
+Vercel Git auto-deploys are disabled through `vercel.json` so pushes to `main` do not publish production directly.
+
+Production releases are handled by Release Please. When a release PR is merged, Release Please creates the GitHub Release and `vX.Y.Z` tag; the same workflow checks out that tag and deploys it to Vercel production.
+
+Preview deployments run from GitHub Actions on pull requests targeting `main`. The preview workflow builds with Vercel CLI, deploys a non-production preview, and comments the preview URL back on the PR.
+
+The deployment workflows require these GitHub Actions secrets:
+
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
+
+Optionally, `RELEASE_PLEASE_TOKEN` can be set to a GitHub personal access token if release PRs should trigger preview workflows and other checks created by GitHub Actions.
+
+The domain `sila-fawn.vercel.app` redirects to `www.silapadin.com` via a 301 configured in `vercel.json`.
