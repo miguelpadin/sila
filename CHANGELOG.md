@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.6.3](https://github.com/miguelpadin/sila/compare/v1.6.2...v1.6.3) (2026-05-15)
+
+
+### Bug Fixes
+
+* add maps link to Galicia and lighten footer-bottom text ([751558e](https://github.com/miguelpadin/sila/commit/751558e6112b1db686c397b750f0ac091fb7fc15))
+* revert font display to swap to avoid LCP render delay ([7d3fe40](https://github.com/miguelpadin/sila/commit/7d3fe40d37b27cba4481d7f62646ab3eae696e44))
+* right-align footer contact column on desktop ([057e8d0](https://github.com/miguelpadin/sila/commit/057e8d04bd6c4bf8278a50e15a9aa3322d04d977))
+
 ## [1.6.2](https://github.com/miguelpadin/sila/compare/v1.6.1...v1.6.2) (2026-05-15)
 
 
