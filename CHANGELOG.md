@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.5.1](https://github.com/miguelpadin/sila/compare/v1.5.0...v1.5.1) (2026-05-15)
+
+
+### Bug Fixes
+
+* remove render-blocking font requests for faster mobile load ([c5bba92](https://github.com/miguelpadin/sila/commit/c5bba92f19f6fdd35c311daee9b8f7607eb26a6e))
+
+
+### Performance Improvements
+
+* optimize mobile PageSpeed (async fonts, resized images) ([7f5fa9d](https://github.com/miguelpadin/sila/commit/7f5fa9da5f6e5ba859d9713fe048ab051d21dcc2))
+
+
+### Miscellaneous Chores
+
+* force release 1.5.1 ([dc35e30](https://github.com/miguelpadin/sila/commit/dc35e3097b654b61f0913518d88e2d777ce1c028))
+
 ## [1.5.0](https://github.com/miguelpadin/sila/compare/v1.4.0...v1.5.0) (2026-05-15)
 
 
