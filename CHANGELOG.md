@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/miguelpadin/sila/compare/v1.2.0...v1.2.1) (2026-05-15)
+
+
+### Bug Fixes
+
+* update actions versions in workflows for improved stability ([bc66ea9](https://github.com/miguelpadin/sila/commit/bc66ea9090b1a2ac8af7bfbd33e575bb37fb5cca))
+
 ## [1.2.0](https://github.com/miguelpadin/sila/compare/v1.1.0...v1.2.0) (2026-05-15)
 
 
