@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0](https://github.com/miguelpadin/sila/compare/v1.5.1...v1.6.0) (2026-05-15)
+
+
+### Features
+
+* show version in footer, aligned right on desktop ([1222fd3](https://github.com/miguelpadin/sila/commit/1222fd360c2452473e04fee2832ed8d1d3631bd1))
+
+
+### Performance Improvements
+
+* inline CSS, fix font CLS, shrink thumbnails further ([740f067](https://github.com/miguelpadin/sila/commit/740f0677f64b5ff6fe71fb2a018466e9feaa3436))
+
 ## [1.5.1](https://github.com/miguelpadin/sila/compare/v1.5.0...v1.5.1) (2026-05-15)
 
 
