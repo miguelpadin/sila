@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.4](https://github.com/miguelpadin/sila/compare/v1.6.3...v1.6.4) (2026-05-18)
+
+
+### Bug Fixes
+
+* remove unused Search Console verification token ([7abdeb9](https://github.com/miguelpadin/sila/commit/7abdeb94028cf2f591ce0332f4ec07f2c31537ff))
+
 ## [1.6.3](https://github.com/miguelpadin/sila/compare/v1.6.2...v1.6.3) (2026-05-15)
 
 
