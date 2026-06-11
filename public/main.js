@@ -117,19 +117,18 @@ function loadGA() {
 }
 
 function loadClarity() {
-  if (document.getElementById('clarity-script')) return;
-
-  window.clarity =
-    window.clarity ||
-    function clarity() {
-      (window.clarity.q = window.clarity.q || []).push(arguments);
-    };
-
-  const s = document.createElement('script');
-  s.id = 'clarity-script';
-  s.async = true;
-  s.src = 'https://www.clarity.ms/tag/wrasj3g5v7';
-  document.head.appendChild(s);
+  (function (c, l, a, r, i, t, y) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(window, document, 'clarity', 'script', 'wrasj3g5v7');
 }
 
 const cookieBanner = document.getElementById('cookieBanner');
