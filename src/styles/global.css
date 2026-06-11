@@ -625,12 +625,13 @@ h4 {
 
 
 .quote-panel blockquote {
-  max-width: 14ch;
+  width: 100%;
   margin: 0 auto 1rem;
   font-family: Syne, sans-serif;
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  font-size: clamp(1.3rem, 5vw, 4.4rem);
   line-height: 0.95;
   letter-spacing: 0;
+  overflow-wrap: break-word;
 }
 
 .split-panel {
