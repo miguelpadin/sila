@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/miguelpadin/sila/compare/v1.6.1...v1.6.2) (2026-05-15)
+
+
+### Bug Fixes
+
+* use full-width hr dividers in footer ([3cf69ed](https://github.com/miguelpadin/sila/commit/3cf69ed6e375527730cddff9bb64110ff71e6aba))
+
 ## [1.6.1](https://github.com/miguelpadin/sila/compare/v1.6.0...v1.6.1) (2026-05-15)
 
 
