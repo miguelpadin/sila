@@ -84,9 +84,17 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : und
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Syne:wght@400;500;700;800&amp;display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Syne:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     {structuredDataJson && <script is:inline type="application/ld+json" set:html={structuredDataJson}></script>}
   </head>
