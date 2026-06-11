@@ -1,0 +1,47 @@
+---
+interface Props {
+  footerCopy?: string;
+}
+
+const {
+  footerCopy = 'Fotografía editorial, maternidad, branding y dirección visual para marcas con una estética limpia y luminosa.',
+} = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand footer-brand" href="/" aria-label="Ir al inicio de Sila Padín Studio">
+        <img src="/assets/brand/logo.png" alt="Logo de Sila Padín Studio" width="96" height="96" />
+        <span class="brand-text">
+          <strong>Sila Padín</strong>
+          <small>Studio</small>
+        </span>
+      </a>
+      <p class="footer-copy">{footerCopy}</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="/servicios.html">Servicios</a>
+      <a href="/portafolio.html">Portafolio</a>
+      <a href="/historias.html">Historias</a>
+      <a href="/sobre-mi.html">Sobre mí</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:silapadin@gmail.com">silapadin@gmail.com</a>
+      <a href="https://www.instagram.com/silapadinphotography" target="_blank" rel="noreferrer">Instagram</a>
+      <span>Galicia, España</span>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span data-year></span> Sila Padín Studio</span>
+    <span>Todos los derechos reservados.</span>
+    <div class="footer-legal">
+      <a href="/politica-de-privacidad.html">Política de privacidad</a>
+      <a href="/politica-de-cookies.html">Política de cookies</a>
+      <a href="/aviso-legal.html">Aviso legal</a>
+    </div>
+  </div>
+</footer>
