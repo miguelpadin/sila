@@ -1,5 +1,7 @@
 # Sila Padín Studio — Website
 
+<img src="https://cdn.simpleicons.org/astro/BC52EE" alt="Astro" width="32" height="32">
+
 Photography portfolio and brand website for [Sila Padín Studio](https://www.silapadin.com), a photographer based in Galicia, Spain, specialising in editorial, maternity, portrait, lifestyle, and wedding photography.
 
 ## Tech stack
