@@ -1,8 +1,13 @@
 ---
+import { execSync } from 'node:child_process';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
+
+const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
+const commitDate = execSync('git log -1 --format=%cd').toString().trim();
+const commitMsg  = execSync('git log -1 --format=%s').toString().trim();
 
 type NavKey = 'servicios' | 'portafolio' | 'historias' | 'sobre-mi' | 'contacto';
 
@@ -44,6 +49,7 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : und
 <!doctype html>
 <html lang="es">
   <head>
+    <Fragment set:html={`<!-- Build: ${commitDate} | ${commitMsg} | ${commitHash} -->`} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f2f0eb" />
