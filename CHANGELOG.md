@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.1](https://github.com/miguelpadin/sila/compare/v1.6.0...v1.6.1) (2026-05-15)
+
+
+### Bug Fixes
+
+* center copyright middle text, prefix version label, fix contrast ([69277d2](https://github.com/miguelpadin/sila/commit/69277d22ed92d88561540b40e1eb42c519105e04))
+* restrict footer text alignment to desktop only ([9f0e4a4](https://github.com/miguelpadin/sila/commit/9f0e4a4d866bca61dde4227c8dc11842b5c1ff50))
+
 ## [1.6.0](https://github.com/miguelpadin/sila/compare/v1.5.1...v1.6.0) (2026-05-15)
 
 
