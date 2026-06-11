@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const page = {
+  "title": "Historias | Sila Padín Studio",
+  "description": "Historias, procesos y mirada editorial detrás de sesiones de boda, marca y maternidad.",
+  "canonicalPath": "/historias.html",
+  "bodyClass": "page-stories",
+  "currentPage": "historias",
+  "ogDescription": "Fotografía de bodas en Galicia con mirada editorial, natural y luminosa.",
+  "ogImage": "/assets/historias_collage_bodas.webp",
+  "ogImageAlt": "Fotografía de boda por Sila Padín Studio"
+} as const;
+---
+
+<BaseLayout {...page}>
+<main id="main-content">
+      <section class="section reveal">
+        <div class="wrap page-hero">
+          <div>
+            <p class="eyebrow">Bodas</p>
+            <h1 class="page-title">Fotografía de bodas</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="bodas-text">
+            <p>La fotografía de bodas es mucho más que imágenes bonitas. Es memoria, emoción y verdad.</p>
+            <p>Hay días que no se repiten. Días que pasan rápido, entre nervios, abrazos y miradas que lo dicen todo. Como fotógrafa de bodas, mi trabajo es acompañaros desde la calma, observando sin intervenir, captando cada instante de forma natural y sin poses forzadas.</p>
+            <p>Me enfoco en documentar vuestra boda tal y como ocurre: los gestos espontáneos, las emociones reales, los detalles que muchas veces pasan desapercibidos. Mientras vivís vuestro gran día, hay una historia completa desarrollándose a vuestro alrededor, y ahí es donde pongo la mirada.</p>
+            <p>Trabajo la fotografía de boda desde un enfoque documental y editorial, creando imágenes luminosas, cuidadas y atemporales. Cada pareja es única, y por eso cada reportaje de boda también lo es. Antes de fotografiar, necesito entender vuestra historia, vuestros gustos y cómo queréis recordar este día.</p>
+            <p>Si estáis buscando fotógrafa de bodas en Galicia, mi objetivo es ofreceros un acompañamiento cercano y adaptado, para que podáis disfrutar con tranquilidad mientras todo queda documentado con sensibilidad.</p>
+            <p>No se trata solo de hacer fotos.<br>Se trata de contar vuestra historia con autenticidad. Sin artificios. Sin filtros. Solo lo que de verdad importa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="bodas-collage">
+            <img decoding="async" src="/assets/historias_collage_bodas.webp" alt="Collage de fotografía de bodas por Sila Padín Studio" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="quote-panel">
+            <p>Si has llegado hasta aquí y estáis buscando fotografía de bodas natural, elegante y sin artificios para vuestro gran día, podéis contactar conmigo y solicitar vuestro presupuesto de fotografía de bodas sin compromiso.</p>
+            <div class="button-row">
+              <a class="btn btn-solid" href="/contacto.html">Contactar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

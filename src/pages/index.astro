@@ -1,60 +1,22 @@
-<!doctype html>
-<html lang="es">
-  <head>
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f2f0eb" />
-    <title>Sila Padín Studio | Fotografía editorial y branding</title>
-    <meta
-      name="description"
-      content="Fotografía editorial, maternidad, retrato y dirección visual desde Galicia con una estética limpia, luminosa y atemporal."
-    />
-    <!-- SEO -->
-    <link rel="canonical" href="https://www.silapadin.com/" />
-    <!-- Hreflang -->
-    <link rel="alternate" hreflang="es" href="https://www.silapadin.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.silapadin.com/" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Sila Padín" />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="Sila Padín Studio" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.silapadin.com/" />
-    <meta property="og:title" content="Sila Padín Studio | Fotografía editorial y branding" />
-    <meta property="og:description" content="Fotografía editorial, maternidad, retrato y dirección visual desde Galicia con una estética limpia, luminosa y atemporal." />
-    <meta property="og:image" content="https://www.silapadin.com/assets/inicio/Embarazo-Sara-39.jpg" />
-    <meta property="og:image:alt" content="Sesión de maternidad exterior por Sila Padín Studio" />
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sila Padín Studio | Fotografía editorial y branding" />
-    <meta name="twitter:description" content="Fotografía editorial, maternidad, retrato y dirección visual desde Galicia con una estética limpia, luminosa y atemporal." />
-    <meta name="twitter:image" content="https://www.silapadin.com/assets/inicio/Embarazo-Sara-39.jpg" />
-    <meta name="twitter:image:alt" content="Sesión de maternidad exterior por Sila Padín Studio" />
-
-    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
-    <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/brand/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Syne:wght@400;500;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-
-  <script type="application/ld+json">
-  {
+const page = {
+  "title": "Sila Padín Studio | Fotografía editorial y branding",
+  "description": "Fotografía editorial, maternidad, retrato y dirección visual desde Galicia con una estética limpia, luminosa y atemporal.",
+  "canonicalPath": "/",
+  "bodyClass": "page-home",
+  "ogDescription": "Fotografía editorial, maternidad, retrato y dirección visual desde Galicia con una estética limpia, luminosa y atemporal.",
+  "ogImage": "/assets/inicio_01.webp",
+  "ogImageAlt": "Sesión de maternidad exterior por Sila Padín Studio",
+  "structuredData": {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Sila Padín Studio",
     "description": "Fotógrafa y directora visual en Galicia especializada en maternidad, marca personal, lifestyle y bodas.",
     "url": "https://www.silapadin.com",
     "logo": "https://www.silapadin.com/assets/brand/logo.png",
-    "image": "https://www.silapadin.com/assets/inicio/Embarazo-Sara-39.jpg",
+    "image": "https://www.silapadin.com/assets/inicio_01.webp",
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
@@ -71,36 +33,11 @@
       "url": "https://www.silapadin.com/sobre-mi.html"
     }
   }
-  </script>
-  </head>
-  <body class="page-home">
-    <a href="#main-content" class="skip-link">Saltar al contenido</a>
-    <header class="site-header">
-      <div class="wrap header-bar">
-        <a class="brand" href="index.html" aria-label="Ir al inicio de Sila Padín Studio">
-          <img src="assets/brand/logo.png" alt="Logo de Sila Padín Studio" />
-          <span class="brand-text">
-            <strong>Sila Padín</strong>
-            <small>Studio</small>
-          </span>
-        </a>
+} as const;
+---
 
-        <button class="menu-btn" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-          <a href="servicios.html">Servicios</a>
-          <a href="portafolio.html">Portafolio</a>
-          <a href="historias.html">Historias</a>
-          <a href="sobre-mi.html">Sobre mí</a>
-          <a class="nav-cta" href="contacto.html">Contacto</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content">
+<BaseLayout {...page}>
+<main id="main-content">
       <section class="section hero reveal">
         <div class="wrap hero-grid">
           <div class="hero-copy">
@@ -112,8 +49,8 @@
             </p>
 
             <div class="button-row">
-              <a class="btn btn-solid" href="contacto.html">Reservar sesión</a>
-              <a class="btn btn-line" href="portafolio.html">Ver portafolio</a>
+              <a class="btn btn-solid" href="/contacto.html">Reservar sesión</a>
+              <a class="btn btn-line" href="/portafolio.html">Ver portafolio</a>
             </div>
 
             <div class="hero-meta">
@@ -134,37 +71,37 @@
 
           <div class="hero-visual">
             <figure class="frame frame-tall">
-              <img
-                src="assets/inicio_01.webp"
+              <img fetchpriority="high" decoding="async"
+                src="/assets/inicio_01.webp"
                 alt="Sesión de maternidad exterior"
               />
             </figure>
 
             <div class="visual-stack">
               <figure class="frame frame-square">
-                <img
-                  src="assets/inicio/inicio_imagen-2-inicio-embarazo.webp"
+                <img decoding="async"
+                  src="/assets/inicio/inicio_imagen-2-inicio-embarazo.webp"
                   alt="Sesión de maternidad"
                   loading="lazy"
                 />
               </figure>
               <figure class="frame frame-wide">
-                <img
-                  src="assets/inicio/inicio_imagen-inicio-1-pipa-pirita.webp"
+                <img decoding="async"
+                  src="/assets/inicio/inicio_imagen-inicio-1-pipa-pirita.webp"
                   alt="Sesión de retrato personal"
                   loading="lazy"
                 />
               </figure>
               <figure class="frame frame-wide">
-                <img
-                  src="assets/inicio/inicio_imagen3-inicio-comunion.webp"
+                <img decoding="async"
+                  src="/assets/inicio/inicio_imagen3-inicio-comunion.webp"
                   alt="Sesión de evento"
                   loading="lazy"
                 />
               </figure>
               <figure class="frame frame-wide">
-                <img
-                  src="assets/inicio/inicio_imagen-4-inicio-postboda.webp"
+                <img decoding="async"
+                  src="/assets/inicio/inicio_imagen-4-inicio-postboda.webp"
                   alt="Sesión de postboda"
                   loading="lazy"
                 />
@@ -190,8 +127,8 @@
           <div class="feature-grid">
             <article class="feature-card">
               <figure>
-                <img
-                  src="assets/seleccion_01.webp"
+                <img decoding="async"
+                  src="/assets/seleccion_01.webp"
                   alt="Retrato exterior de una mujer embarazada en una sesión de maternidad"
                   loading="lazy"
                 />
@@ -208,8 +145,8 @@
 
             <article class="feature-card">
               <figure>
-                <img
-                  src="assets/seleccion_02.webp"
+                <img decoding="async"
+                  src="/assets/seleccion_02.webp"
                   alt="Detalle de sesión fotográfica"
                   loading="lazy"
                 />
@@ -226,8 +163,8 @@
 
             <article class="feature-card">
               <figure>
-                <img
-                  src="assets/seleccion_03.webp"
+                <img decoding="async"
+                  src="/assets/seleccion_03.webp"
                   alt="Fotografía de marca editorial"
                   loading="lazy"
                 />
@@ -260,7 +197,7 @@
         <div class="wrap split-panel">
           <div class="poster-card">
             <div class="poster-inner">
-              <img src="assets/brand/logo.png" alt="Logo de Sila Padín Studio" loading="lazy" />
+              <img decoding="async" src="/assets/brand/logo.png" alt="Logo de Sila Padín Studio" loading="lazy" />
               <p class="poster-caption">Dirección visual, fotografía y edición con una estética limpia.</p>
             </div>
           </div>
@@ -298,8 +235,8 @@
             </div>
 
             <div class="button-row">
-              <a class="btn btn-solid" href="servicios.html">Ver servicios</a>
-              <a class="btn btn-line" href="contacto.html">Pedir propuesta</a>
+              <a class="btn btn-solid" href="/servicios.html">Ver servicios</a>
+              <a class="btn btn-line" href="/contacto.html">Pedir propuesta</a>
             </div>
           </div>
         </div>
@@ -317,7 +254,7 @@
               </p>
             </div>
             <div class="button-row">
-              <a class="btn btn-solid-light" href="contacto.html">Escríbeme</a>
+              <a class="btn btn-solid-light" href="/contacto.html">Escríbeme</a>
               <a
                 class="btn btn-dark-line"
                 href="https://www.instagram.com/silapadinphotography"
@@ -330,64 +267,4 @@
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <a class="brand footer-brand" href="index.html">
-            <img src="assets/brand/logo.png" alt="Logo de Sila Padín Studio" />
-            <span class="brand-text">
-              <strong>Sila Padín</strong>
-              <small>Studio</small>
-            </span>
-          </a>
-          <p class="footer-copy">
-            Fotografía editorial, maternidad, branding y dirección visual para marcas con una
-            estética limpia y luminosa.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <a href="servicios.html">Servicios</a>
-          <a href="portafolio.html">Portafolio</a>
-          <a href="historias.html">Historias</a>
-          <a href="sobre-mi.html">Sobre mí</a>
-          <a href="contacto.html">Contacto</a>
-        </div>
-
-        <div class="footer-links">
-          <a href="mailto:silapadin@gmail.com">silapadin@gmail.com</a>
-          <a
-            href="https://www.instagram.com/silapadinphotography"
-            target="_blank"
-            rel="noreferrer"
-            >Instagram</a
-          >
-          <span>Galicia, España</span>
-        </div>
-      </div>
-      <div class="wrap footer-bottom">
-        <span>© <span data-year></span> Sila Padín Studio</span>
-        <span>Todos los derechos reservados.</span>
-        <div class="footer-legal">
-          <a href="politica-de-privacidad.html">Política de privacidad</a>
-          <a href="politica-de-cookies.html">Política de cookies</a>
-          <a href="aviso-legal.html">Aviso legal</a>
-        </div>
-      </div>
-    </footer>
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
-    <p class="cookie-text">
-      Usamos cookies propias para mejorar tu experiencia. <a href="politica-de-cookies.html" class="cookie-link">Política de cookies</a>
-    </p>
-    <div class="cookie-actions">
-      <button class="cookie-btn cookie-reject" type="button">Solo necesarias</button>
-      <button class="cookie-btn cookie-accept" type="button">Aceptar</button>
-    </div>
-  </div>
-
-    <script src="main.js"></script>
-</body>
-</html>
+</BaseLayout>
