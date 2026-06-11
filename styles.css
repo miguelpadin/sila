@@ -1068,7 +1068,7 @@ h4 {
   }
 
   .wrap {
-    width: min(var(--max-width), calc(100% - 1.2rem));
+    width: min(var(--max-width), calc(100% - 2.4rem));
   }
 }
 
