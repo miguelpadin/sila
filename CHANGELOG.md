@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/miguelpadin/sila/compare/v1.4.0...v1.5.0) (2026-05-15)
+
+
+### Features
+
+* integrate Hotjar analytics with cookie consent and update cookie policy ([254dd58](https://github.com/miguelpadin/sila/commit/254dd58620d9ef8498fb370cd68ada76a120985d))
+
 ## [1.4.0](https://github.com/miguelpadin/sila/compare/v1.3.0...v1.4.0) (2026-05-15)
 
 
