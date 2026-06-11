@@ -982,6 +982,11 @@ h4 {
   .footer-version {
     text-align: right;
   }
+
+  .footer-grid > div:last-child {
+    justify-self: end;
+    text-align: right;
+  }
 }
 
 .footer-version {
