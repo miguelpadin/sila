@@ -116,6 +116,22 @@ function loadGA() {
   window.gtag('config', 'G-QRXP83WV9M');
 }
 
+function loadClarity() {
+  if (document.getElementById('clarity-script')) return;
+
+  window.clarity =
+    window.clarity ||
+    function clarity() {
+      (window.clarity.q = window.clarity.q || []).push(arguments);
+    };
+
+  const s = document.createElement('script');
+  s.id = 'clarity-script';
+  s.async = true;
+  s.src = 'https://www.clarity.ms/tag/wrasj3g5v7';
+  document.head.appendChild(s);
+}
+
 const cookieBanner = document.getElementById('cookieBanner');
 if (cookieBanner) {
   const acceptButton = cookieBanner.querySelector('.cookie-accept');
@@ -142,12 +158,14 @@ if (cookieBanner) {
     });
   } else if (consent === 'accepted') {
     loadGA();
+    loadClarity();
   }
 
   acceptButton?.addEventListener('click', () => {
     setConsent('accepted');
     cookieBanner.classList.remove('is-visible');
     loadGA();
+    loadClarity();
   });
 
   const rejectCookies = () => {
