@@ -1,6 +1,6 @@
 {
   "name": "sila",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -17,7 +17,9 @@
     "astro": "6.4.6"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@parcel/watcher"]
+    "onlyBuiltDependencies": [
+      "@parcel/watcher"
+    ]
   },
   "overrides": {
     "yaml-language-server": {
