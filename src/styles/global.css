@@ -35,8 +35,16 @@ body {
   font-family: Manrope, sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top right, rgba(207, 214, 229, 0.48), transparent 28%),
-    radial-gradient(circle at left 10%, rgba(255, 255, 255, 0.65), transparent 25%),
+    radial-gradient(
+      circle at top right,
+      rgba(207, 214, 229, 0.48),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at left 10%,
+      rgba(255, 255, 255, 0.65),
+      transparent 25%
+    ),
     var(--bg);
   line-height: 1.6;
 }
@@ -228,7 +236,9 @@ textarea {
   width: 1rem;
   height: 1px;
   background: currentColor;
-  transition: transform var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 .menu-btn[aria-expanded="true"] span:first-child {
@@ -659,7 +669,6 @@ h4 {
   }
 }
 
-
 .quote-panel blockquote {
   width: 100%;
   margin: 0 auto 1rem;
@@ -742,7 +751,11 @@ h4 {
   align-items: center;
   color: #fff;
   background:
-    radial-gradient(circle at top right, rgba(157, 172, 204, 0.28), transparent 26%),
+    radial-gradient(
+      circle at top right,
+      rgba(157, 172, 204, 0.28),
+      transparent 26%
+    ),
     #111522;
 }
 
@@ -834,7 +847,9 @@ h4 {
 }
 
 .portfolio-item {
-  transition: opacity 200ms ease, transform 200ms ease;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
 }
 
 .portfolio-item.is-hidden {
@@ -958,112 +973,7 @@ h4 {
   text-transform: uppercase;
 }
 
-.site-footer {
-  padding: 1rem clamp(1rem, 4vw, 4rem) 2rem;
-  border-top: 1px solid var(--line);
-}
-
-.footer-grid,
-.footer-bottom {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.footer-brand {
-  margin-bottom: 1rem;
-}
-
-.footer-copy {
-  margin: 0;
-  text-align: justify;
-}
-
-@media (min-width: 1024px) {
-  .footer-copy {
-    max-width: 34ch;
-  }
-}
-
-.footer-links {
-  display: grid;
-  align-content: start;
-  gap: 0.6rem;
-}
-
-.footer-sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.6rem;
-}
-
-.footer-sections a {
-  display: block;
-}
-
-.footer-links a,
-.footer-links span,
-.footer-bottom {
-  color: var(--muted);
-  font-size: 0.92rem;
-  text-decoration: none;
-}
-
-.footer-links a {
-  text-decoration: underline;
-}
-
-.footer-divider {
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 1.4rem 0 0;
-}
-
-.footer-bottom {
-  align-items: center;
-  padding-top: 1.4rem;
-  color: #686c7a;
-  justify-items: center;
-}
-
-@media (min-width: 761px) {
-  .footer-bottom > span:nth-child(2) {
-    text-align: center;
-  }
-
-  .footer-version {
-    text-align: right;
-  }
-}
-
-.footer-version {
-  font-variant-numeric: tabular-nums;
-}
-
-.footer-contact {
-  justify-items: center;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-}
-
-.footer-legal {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.6rem;
-  padding: 0.9rem 0 0;
-  justify-items: center;
-}
-
-.footer-legal a {
-  color: var(--muted);
-  font-size: 0.82rem;
-  text-decoration: none;
-}
-
-.footer-legal a:hover {
-  color: var(--ink);
-}
+/* ── Footer ────────────────────────────────────────────── */
 
 .reveal {
   transform: translateY(1.5rem);
@@ -1176,7 +1086,6 @@ h4 {
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 }
 
 /* ── Mobile First: Desktop ────────────────────────────── */
@@ -1236,32 +1145,6 @@ h4 {
   .about-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .footer-grid {
-    grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 0.8fr));
-  }
-
-  .footer-bottom {
-    grid-template-columns: auto 1fr auto;
-  }
-
-  .footer-contact {
-    border-top: none;
-    padding-top: 0;
-    justify-items: end;
-    text-align: right;
-  }
-
-  .footer-legal {
-    display: flex;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-}
-
-/* ── Debug ────────────────────────────────────────────── */
-.debug-box {
-  border: 1px solid red;
 }
 
 /* ── Page: About (sobre-mi) — isolate from global refactor ── */
@@ -1282,30 +1165,33 @@ h4 {
 
 /* ── Cookie Banner ────────────────────────────────────── */
 .cookie-banner {
+  display: none;
   position: fixed;
-  bottom: 1.75rem;
-  right: 1.75rem;
-  transform: translateY(calc(100% + 2.5rem));
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 900;
-  width: min(380px, calc(100% - 2rem));
+  align-items: center;
+  justify-content: center;
+  background: rgba(19, 24, 42, 0.4);
+}
+
+.cookie-banner.is-visible {
+  display: flex;
+}
+
+.cookie-panel {
+  width: min(480px, calc(100% - 2rem));
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 1rem;
-  padding: 1.25rem 1.4rem;
-  background: rgba(251, 250, 247, 0.94);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-md);
-  box-shadow: 0 8px 40px rgba(19, 24, 42, 0.13);
-  transition: transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
-}
-
-.cookie-banner.is-visible {
-  transform: translateY(0);
-  pointer-events: auto;
+  padding: 1.5rem 1.75rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 80px rgba(19, 24, 42, 0.2);
 }
 
 .cookie-text {
@@ -1325,7 +1211,7 @@ h4 {
 .cookie-actions {
   display: flex;
   gap: 0.6rem;
-  align-self: flex-end;
+  justify-content: flex-end;
 }
 
 .cookie-btn {
@@ -1336,7 +1222,9 @@ h4 {
   padding: 0.45rem 1rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: background var(--transition), color var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
   white-space: nowrap;
 }
 
@@ -1361,24 +1249,4 @@ h4 {
 .cookie-accept:hover {
   background: #2a3148;
   border-color: #2a3148;
-}
-
-@media (max-width: 480px) {
-  .cookie-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.9rem;
-    bottom: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-  }
-
-  .cookie-actions {
-    width: 100%;
-  }
-
-  .cookie-btn {
-    flex: 1;
-    text-align: center;
-  }
 }
