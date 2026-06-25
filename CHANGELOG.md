@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.5](https://github.com/miguelpadin/sila/compare/v1.6.4...v1.6.5) (2026-06-25)
+
+
+### Bug Fixes
+
+* specify Node.js engine requirements ([9609968](https://github.com/miguelpadin/sila/commit/96099683380e54fc90bfd92d0677a7fcc0af822e))
+
 ## [1.6.4](https://github.com/miguelpadin/sila/compare/v1.6.3...v1.6.4) (2026-05-18)
 
 
