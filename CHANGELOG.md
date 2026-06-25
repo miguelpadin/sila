@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.6](https://github.com/miguelpadin/sila/compare/v1.6.5...v1.6.6) (2026-06-25)
+
+
+### Bug Fixes
+
+* align legal page layout with rest of site — remove forced centered padding, add justified text ([41b233f](https://github.com/miguelpadin/sila/commit/41b233fcffdfd60ee40a35c36149aa55bcfd54cf))
+
 ## [1.6.5](https://github.com/miguelpadin/sila/compare/v1.6.4...v1.6.5) (2026-06-25)
 
 
