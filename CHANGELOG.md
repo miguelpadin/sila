@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.7](https://github.com/miguelpadin/sila/compare/v1.6.6...v1.6.7) (2026-06-25)
+
+
+### Bug Fixes
+
+* trigger release-please patch bump ([5211229](https://github.com/miguelpadin/sila/commit/5211229f8ec2221bef798a3bc2d4e7f6b0efe871))
+
 ## [1.6.6](https://github.com/miguelpadin/sila/compare/v1.6.5...v1.6.6) (2026-06-25)
 
 
