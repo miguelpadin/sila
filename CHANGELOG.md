@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/miguelpadin/sila/compare/v1.6.7...v1.7.0) (2026-06-25)
+
+
+### Features
+
+* footer SCSS, cookie banner dialog fix, portfolio section card ([#24](https://github.com/miguelpadin/sila/issues/24)) ([4dfd354](https://github.com/miguelpadin/sila/commit/4dfd354240d3f0a16152ab215f9dff9610e33576))
+
 ## [1.6.7](https://github.com/miguelpadin/sila/compare/v1.6.6...v1.6.7) (2026-06-25)
 
 
