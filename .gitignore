@@ -9,5 +9,6 @@ AGENTS.md
 pending/
 done/
 .agent/
+.atl/
 .vercel
 .env*.local
