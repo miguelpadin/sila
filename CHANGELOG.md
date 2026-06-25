@@ -1,5 +1,81 @@
 # Changelog
 
+## [1.5.1](https://github.com/miguelpadin/sila/compare/v1.6.4...v1.5.1) (2026-06-25)
+
+
+### Features
+
+* add Google Analytics tracking code to all pages ([285f773](https://github.com/miguelpadin/sila/commit/285f773f4005cceac99d85b7b350770f41f0b27b))
+* add Google Search Console verification meta tag ([6a66cc0](https://github.com/miguelpadin/sila/commit/6a66cc0f21c9277d65072afa44160aec9f3b01af))
+* add legal pages and update cookie banner position ([3a58ce6](https://github.com/miguelpadin/sila/commit/3a58ce67cfcd5d64789833e3a09d74c18efb49db))
+* add new portfolio, selection, and presentation assets ([b4bf58d](https://github.com/miguelpadin/sila/commit/b4bf58d16e7e1e4e24bf530f119625bca039f167))
+* add release automation configuration with release-please ([e0c1399](https://github.com/miguelpadin/sila/commit/e0c139931cfc36721e054a80c88e49c897be9804))
+* add theme-color meta tag to match browser UI with site background ([dd70154](https://github.com/miguelpadin/sila/commit/dd70154c356895edc065a5897c743518e69d0d9c))
+* enhance release workflows for Vercel deployment and add preview functionality ([28f7b11](https://github.com/miguelpadin/sila/commit/28f7b11121505e62fd233f13fb7ecee1b5bc3a91))
+* implement comprehensive SEO meta tags, sitemap, and robots.txt for improved search engine indexing ([a2f4313](https://github.com/miguelpadin/sila/commit/a2f431395ccdf69be0eaae15c6d6e0fd179d1819))
+* implement cookie consent banner and add hreflang tags to all pages ([db25c5e](https://github.com/miguelpadin/sila/commit/db25c5ea9c0435daa28e201a888039b9e0dd9614))
+* implement Google Analytics tracking with cookie consent management ([7ce12d2](https://github.com/miguelpadin/sila/commit/7ce12d2d5cb1174d8ecb46f01650486a95c7aeaf))
+* improve accessibility — focus indicators, skip link, ARIA labels, contrast, sr-only, filter announcements ([6ccea9e](https://github.com/miguelpadin/sila/commit/6ccea9e7d9b58fdcf5527a1ed2c9ef36870dd0d9))
+* inject build commit info as HTML comment via BaseLayout ([91f42fb](https://github.com/miguelpadin/sila/commit/91f42fb3df7015d1653e53f1aa4e64a99f7e9e82))
+* inject git commit info as HTML comment on build ([413de8f](https://github.com/miguelpadin/sila/commit/413de8fc3499008effd80b5bb7fc92200edeed26))
+* integrate Hotjar analytics with cookie consent and update cookie policy ([850d5bf](https://github.com/miguelpadin/sila/commit/850d5bf80431769d8b6b4e08b4e283d679676f40))
+* integrate Microsoft Clarity analytics with cookie consent ([7fc30c8](https://github.com/miguelpadin/sila/commit/7fc30c88c3d241a9614f71790a3e6d927201c6d4))
+* migrate image assets to WebP format and update references across site pages ([76563c4](https://github.com/miguelpadin/sila/commit/76563c466b453da5bd2daad530b6e268774dc0a0))
+* migrate site to Astro ([ff51efb](https://github.com/miguelpadin/sila/commit/ff51efbae7ce190fb020d673335329300ec75a2d))
+* move privacy policy link to footer copyright row ([e74b047](https://github.com/miguelpadin/sila/commit/e74b0479ce339f7c7cd731579d07f11e51af032c))
+* pretty-print HTML output and add authorship comment ([f458cd9](https://github.com/miguelpadin/sila/commit/f458cd9790f174b3e172ea5948e1a62d984e431a))
+* show version in footer, aligned right on desktop ([448c42e](https://github.com/miguelpadin/sila/commit/448c42e7d6ae1ee10165bf1492970098ecd9b5d4))
+* update .gitignore and add project rules documentation ([e4bec49](https://github.com/miguelpadin/sila/commit/e4bec492a2f6ca104f3755b36f7718c6fed075c6))
+* update home section with 4 optimized images ([9770ba5](https://github.com/miguelpadin/sila/commit/9770ba5975b4fb201cc18add4c8293f1d5bce4fd))
+* update portfolio page with new category filters and reorganized project imagery ([185f779](https://github.com/miguelpadin/sila/commit/185f779c387e308ce68eb59e7397bb3f6e1edf55))
+* update portfolio with new assets and redesign wedding stories page content ([2c325fd](https://github.com/miguelpadin/sila/commit/2c325fdaa2f5782ac0323d3195277f99ed1dcd84))
+
+
+### Bug Fixes
+
+* add maps link to Galicia and lighten footer-bottom text ([9f85826](https://github.com/miguelpadin/sila/commit/9f8582681a121d9e8f610139502c6ebb16f5e422))
+* adjust letter-spacing for h3 and h4 headings for improved typography ([d14e98f](https://github.com/miguelpadin/sila/commit/d14e98f6ea757de146b0e3389bdc6c0e17c36bb9))
+* center copyright middle text, prefix version label, fix contrast ([e913a7f](https://github.com/miguelpadin/sila/commit/e913a7fbefd2d909764cac9084952ca8f20f1279))
+* content corrections — cookie consent copy, a11y table semantics, privacy text, Instagram handle, typo ([e0f0cf3](https://github.com/miguelpadin/sila/commit/e0f0cf3395e2f1cdabb2338a4eee587b10d4eb71))
+* correct authorship link in HTML comment ([48b4ca9](https://github.com/miguelpadin/sila/commit/48b4ca9d47aca718241739ee7e6f05594315e506))
+* enhance visibility transition for reveal elements ([cb67b14](https://github.com/miguelpadin/sila/commit/cb67b14b0bf6f1e6913b47ca163ac284ca678057))
+* increase mobile wrap padding for better edge spacing ([19f07c2](https://github.com/miguelpadin/sila/commit/19f07c2123ff45ad1e7680929f5e6645d7326670))
+* prevent h1 overflow on small mobile and add overflow-x hidden to body ([c252ee3](https://github.com/miguelpadin/sila/commit/c252ee369577f107dc02f0f0dcd94f9393d16dff))
+* prevent horizontal overflow and normalize mobile wrap padding ([a470fe1](https://github.com/miguelpadin/sila/commit/a470fe18ac8cc49b35cf60d53685dc50548aa53b))
+* prevent Instagram handle overflow on mobile in quote panel ([8a4eced](https://github.com/miguelpadin/sila/commit/8a4eced351a4034c32c01e4e01241844f9fbee2e))
+* remove render-blocking font requests for faster mobile load ([2e29e5a](https://github.com/miguelpadin/sila/commit/2e29e5a1468404dabf7ff15d3ec0b521e2839c11))
+* remove unused Search Console verification token ([9b5c935](https://github.com/miguelpadin/sila/commit/9b5c9350582d4ffd81bc347e4aef133977fce5e7))
+* rename logo.PNG to logo.png for case-sensitive Linux servers ([25c6d1c](https://github.com/miguelpadin/sila/commit/25c6d1c7734b28ea609f6802d14369c17e0a4160))
+* restore logo.png with correct lowercase extension for Vercel ([85b4edd](https://github.com/miguelpadin/sila/commit/85b4edd99e3492a984e079c231edc9781e10f091))
+* restrict footer text alignment to desktop only ([d819ecd](https://github.com/miguelpadin/sila/commit/d819ecd8c6abc897cee69e131923d2717f6eb26e))
+* revert font display to swap to avoid LCP render delay ([fbc5ccc](https://github.com/miguelpadin/sila/commit/fbc5cccd523978100a4662a7a2e38594bee2a9c0))
+* right-align footer contact column on desktop ([201e5bf](https://github.com/miguelpadin/sila/commit/201e5bffca35e29acdb4d162461fe81e5028426e))
+* simplify reveal element transition for improved performance ([0766d3c](https://github.com/miguelpadin/sila/commit/0766d3cbf2a170a9ef1e8ce19a6e1405573ecc82))
+* translate authorship comment to English ([05332ea](https://github.com/miguelpadin/sila/commit/05332ea1ddae75fdb061d53e7f4856d0ff6909b7))
+* update .gitignore to include .vercel and .env*.local ([0420f43](https://github.com/miguelpadin/sila/commit/0420f4373542abfd0390016d7ad3765ce5685947))
+* update actions versions in workflows for improved stability ([ca8a89f](https://github.com/miguelpadin/sila/commit/ca8a89f6f6e59aab5af851699462d727d339baa9))
+* update cookie consent message to include Microsoft Clarity and add related cookie details ([63d901c](https://github.com/miguelpadin/sila/commit/63d901c2e9f36443c31afdd4c15a6dd8977953a5))
+* update styles for cta-banner and cookie actions for improved layout and readability ([bac77d1](https://github.com/miguelpadin/sila/commit/bac77d1730aef69dc5ca0eaaa850f6deb9fabdc5))
+* use "Developed by" in authorship HTML comment ([48966fd](https://github.com/miguelpadin/sila/commit/48966fd30ec7d9f31e31bcfe4781790ed7164983))
+* use full-width hr dividers in footer ([1e01b93](https://github.com/miguelpadin/sila/commit/1e01b93ce2815a906087f2513f21062d74ead2e9))
+* use official Clarity snippet in loadClarity ([968a8b7](https://github.com/miguelpadin/sila/commit/968a8b7a226895bd44a68b21a02f4c8bea7554c9))
+
+
+### Performance Improvements
+
+* inline CSS, fix font CLS, shrink thumbnails further ([25d71dc](https://github.com/miguelpadin/sila/commit/25d71dc19095fb28fafdabd4f109b12ccce56413))
+* optimize mobile PageSpeed (async fonts, resized images) ([3838fbe](https://github.com/miguelpadin/sila/commit/3838fbe0c77edbd01c20fb2d561b47926d05de35))
+
+
+### Reverts
+
+* restore privacy policy link to footer-legal section ([c8a990f](https://github.com/miguelpadin/sila/commit/c8a990fa9a59ff0c610beb757b80436fa735f077))
+
+
+### Miscellaneous Chores
+
+* force release 1.5.1 ([9300013](https://github.com/miguelpadin/sila/commit/9300013cef83fe486774a1f2356975181980ba61))
+
 ## [1.6.4](https://github.com/miguelpadin/sila/compare/v1.6.3...v1.6.4) (2026-05-18)
 
 
