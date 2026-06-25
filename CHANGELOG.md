@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/miguelpadin/sila/compare/v1.7.1...v1.7.2) (2026-06-25)
+
+
+### Bug Fixes
+
+* Instagram button text, historias CTA card style and blockquote title ([447b6e1](https://github.com/miguelpadin/sila/commit/447b6e1576b08f355dc2afa7e77492048d6dd6a9))
+
 ## [1.7.1](https://github.com/miguelpadin/sila/compare/v1.7.0...v1.7.1) (2026-06-25)
 
 
