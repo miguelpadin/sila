@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/miguelpadin/sila/compare/v1.7.0...v1.7.1) (2026-06-25)
+
+
+### Bug Fixes
+
+* allow @parcel/watcher build scripts for Vercel pnpm 10 ([4282bbe](https://github.com/miguelpadin/sila/commit/4282bbe6441ffe4df84696d558fa46f45552801d))
+
 ## [1.7.0](https://github.com/miguelpadin/sila/compare/v1.6.7...v1.7.0) (2026-06-25)
 
 
