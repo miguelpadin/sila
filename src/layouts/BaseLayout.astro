@@ -85,6 +85,10 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : und
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Syne:wght@400;500;700;800&amp;display=block"
     />
 
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.clarity.ms" />
+    <link rel="dns-prefetch" href="https://static.hotjar.com" />
+
     {structuredDataJson && <script is:inline type="application/ld+json" set:html={structuredDataJson}></script>}
   </head>
   <body class={bodyClass}>
@@ -92,6 +96,6 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : und
     <slot />
     <Footer footerCopy={footerCopy} />
     <CookieBanner />
-    <script is:inline src="/main.js"></script>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>
