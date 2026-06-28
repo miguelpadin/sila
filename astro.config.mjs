@@ -6,6 +6,6 @@ export default defineConfig({
   compressHTML: true,
   build: {
     format: 'file',
-    inlineStylesheets: 'always',
+    inlineStylesheets: 'auto',
   },
 });
