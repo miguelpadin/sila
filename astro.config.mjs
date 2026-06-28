@@ -3,9 +3,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://www.silapadin.com',
   output: 'static',
-  compressHTML: false,
+  compressHTML: true,
   build: {
     format: 'file',
-    inlineStylesheets: 'always',
+    inlineStylesheets: 'auto',
   },
 });
