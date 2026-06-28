@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.3](https://github.com/miguelpadin/sila/compare/v1.7.2...v1.7.3) (2026-06-28)
+
+
+### Bug Fixes
+
+* fix/performance improvements ([#28](https://github.com/miguelpadin/sila/issues/28)) ([24f7512](https://github.com/miguelpadin/sila/commit/24f751228ae052a2727381e33ed265f307580fa8))
+
 ## [1.7.2](https://github.com/miguelpadin/sila/compare/v1.7.1...v1.7.2) (2026-06-25)
 
 
