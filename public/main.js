@@ -47,7 +47,7 @@ if (prefersReducedMotion || !('IntersectionObserver' in globalThis)) {
         if (entry.isIntersecting) entry.target.classList.add('is-visible');
       });
     },
-    { threshold: 0.01 }
+    { rootMargin: '150px', threshold: 0.01 }
   );
 
   revealElements.forEach((element) => {
