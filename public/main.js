@@ -167,23 +167,33 @@ if (cookieBanner) {
     }
   };
 
+  const deferAnalytics = () => {
+    const cb = () => {
+      loadGA();
+      loadClarity();
+      loadHotjar();
+    };
+
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(cb);
+    } else {
+      setTimeout(cb, 200);
+    }
+  };
+
   const consent = getConsent();
   if (!consent) {
     requestAnimationFrame(() => {
       setTimeout(() => cookieBanner.classList.add('is-visible'), 600);
     });
   } else if (consent === 'accepted') {
-    loadGA();
-    loadClarity();
-    loadHotjar();
+    deferAnalytics();
   }
 
   acceptButton?.addEventListener('click', () => {
     setConsent('accepted');
     cookieBanner.classList.remove('is-visible');
-    loadGA();
-    loadClarity();
-    loadHotjar();
+    deferAnalytics();
   });
 
   const rejectCookies = () => {
