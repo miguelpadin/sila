@@ -8,7 +8,8 @@ const page = {
   "bodyClass": "page-about",
   "currentPage": "sobre-mi",
   "ogImage": "/assets/servicios_03.webp",
-  "ogImageAlt": "Sila Padín, fotógrafa y directora visual en Galicia"
+  "ogImageAlt": "Sila Padín, fotógrafa y directora visual en Galicia",
+  "lcpImage": "/assets/sobre_mi_01.webp"
 } as const;
 ---
 
@@ -37,7 +38,9 @@ const page = {
             </div>
           </div>
 
-          <div class="about-portrait" style="background-image: url(/assets/sobre_mi_01.webp)"></div>
+          <div class="about-portrait">
+            <img src="/assets/sobre_mi_01.webp" alt="Sila Padín, fotógrafa y directora visual" width="786" height="1200" fetchpriority="high" />
+          </div>
         </div>
       </section>
 

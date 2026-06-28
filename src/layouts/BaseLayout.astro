@@ -1,13 +1,8 @@
 ---
-import { execSync } from 'node:child_process';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
-
-const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
-const commitDate = execSync('git log -1 --format=%cd').toString().trim();
-const commitMsg  = execSync('git log -1 --format=%s').toString().trim();
 
 type NavKey = 'servicios' | 'portafolio' | 'historias' | 'sobre-mi' | 'contacto';
 
@@ -20,6 +15,7 @@ interface Props {
   ogDescription?: string;
   ogImage?: string;
   ogImageAlt?: string;
+  lcpImage?: string;
   structuredData?: Record<string, unknown>;
   footerCopy?: string;
 }
@@ -36,6 +32,7 @@ const {
   ogDescription = description,
   ogImage = DEFAULT_IMAGE,
   ogImageAlt = 'Fotografía editorial de Sila Padín Studio',
+  lcpImage,
   structuredData,
   footerCopy,
 } = Astro.props;
@@ -50,7 +47,6 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : und
 <html lang="es">
   <head>
     <Fragment set:html={`<!-- Developed by Miguel Padín Domínguez — https://miguelpadin.github.io/ -->`} />
-    <Fragment set:html={`<!-- Build: ${commitDate} | ${commitMsg} | ${commitHash} -->`} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f2f0eb" />
@@ -61,6 +57,8 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : und
     <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Sila Padín" />
+
+    {lcpImage && <link rel="preload" as="image" href={lcpImage} fetchpriority="high" />}
 
     <meta property="og:site_name" content="Sila Padín Studio" />
     <meta property="og:locale" content="es_ES" />
