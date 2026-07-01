@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.4](https://github.com/miguelpadin/sila/compare/v1.7.3...v1.7.4) (2026-07-01)
+
+
+### Bug Fixes
+
+* upgrade astro 7.0.3 and js-yaml 4.3.0 for Snyk vulnerabilities ([41db0a4](https://github.com/miguelpadin/sila/commit/41db0a40078238e34cd55b4292f66c4b8a6a9177))
+
 ## [1.7.3](https://github.com/miguelpadin/sila/compare/v1.7.2...v1.7.3) (2026-06-28)
 
 
