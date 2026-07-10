@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.5](https://github.com/miguelpadin/sila/compare/v1.7.4...v1.7.5) (2026-07-10)
+
+
+### Bug Fixes
+
+* adjust poster layout on mobile and hero spacing ([#32](https://github.com/miguelpadin/sila/issues/32)) ([337af95](https://github.com/miguelpadin/sila/commit/337af95f308ee6c34cdcb1c4f3cea4b1df8ebb0e))
+
 ## [1.7.4](https://github.com/miguelpadin/sila/compare/v1.7.3...v1.7.4) (2026-07-01)
 
 
